@@ -1,0 +1,78 @@
+/*=============== BASE ===============*/
+*,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+.animated-box{
+
+
+margin: 20px;
+
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  position: absolute;
+  /* border-radius: 5px; */
+ overflow: hidden;
+  /* box-shadow: 0 20px 35px rgba(0,0,0,0.3) ; */
+}
+
+.animated-box::before{
+  content: '';
+  height: 150%;
+  width: 150%;
+  border-radius: 50%;
+  position: absolute;
+  background: conic-gradient(
+    #fd004f,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7,
+    #fd004c 
+    /* #ffff,
+    #111,
+    #ffff,
+    #fff,
+    rgb(41, 33, 33),
+    #ffff,
+    #111  */
+
+  
+  );
+  left: -25%;
+  top: -25%;
+  animation: spin 2.5s infinite linear;
+}
+@keyframes spin{
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+.animated-box span{
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 1px;
+  background-color:white;
+  z-index: 11;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+
+.mt{
+  margin-top: 20px;
+  margin-left: 80px;
+}
